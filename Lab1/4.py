@@ -1,0 +1,16 @@
+import cv2 as c 
+
+img = c.imread("images/home.png",0)
+print ("Image 1 : ")
+print ("Shape->dimensions : ",img.shape)
+print ("Size->numbers of pixel : ",img.size)
+print ("Type : ",img.dtype)
+c.imshow("Image",img)
+img2 = c.imread("images/image.jpg")
+print ("Image 2 : ")
+print ("Shape->dimensions : ",img2.shape)
+print ("Size->numbers of pixel : ",img2.size)
+print ("Type : ",img2.dtype)
+c.imshow("Image 2",img2)
+c.waitKey(0)
+c.destroyAllWindows()
