@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # ---------------------------
 # اختيار الصورة
 # ---------------------------
-img_path = r"D:\IT\Level 4\Image Processing\Image-Processing-Course\Lab5\HW edge detection\images\test2.png"
+img_path = r"images\test2.png"
 img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
 
 # ---------------------------

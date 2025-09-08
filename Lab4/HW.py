@@ -42,6 +42,6 @@ while True:
     if cv.waitKey(25) & 0xFF == ord('q'):
         break
 
-# يغلق ملف/جهاز الفيديو ويُحرر الموارد
+# اغلاق ملف/جهاز الفيديو وتحرير الموارد
 cap.release()
 cv.destroyAllWindows()

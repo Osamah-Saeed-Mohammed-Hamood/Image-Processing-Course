@@ -2,10 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# تحميل صورة باللون الرمادي
-img = cv2.imread(r"D:\IT\Level 4\Image Processing\Image-Processing-Course\Lab5\HW edge detection\images\test2.png", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread(r"images\test2.png", cv2.IMREAD_GRAYSCALE)
 
-# أقنعة Kirsch (8 اتجاهات)
 kirsch_masks = {
     "North":      np.array([[-3, -3, -3],
                             [-3,  0, -3],
@@ -40,12 +38,11 @@ kirsch_masks = {
                             [-3,  5,  5]], dtype=np.float32),
 }
 
-# تطبيق الفلترة لكل اتجاه
+
 results = {}
 for direction, kernel in kirsch_masks.items():
     results[direction] = cv2.filter2D(img, -1, kernel)
 
-# عرض النتائج
 plt.figure(figsize=(15,10))
 plt.subplot(3,3,1), plt.imshow(img, cmap='gray'), plt.title("Original")
 
