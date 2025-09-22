@@ -7,8 +7,8 @@ img = cv2.imread(r"images\test2.png", cv2.IMREAD_GRAYSCALE)
 grad_x = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)   # ∂I/∂x
 grad_y = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)   # ∂I/∂y
 
-magnitude = cv2.magnitude(grad_x, grad_y)
-direction = cv2.phase(grad_x, grad_y, angleInDegrees=True)
+magnitude = cv2.magnitude(grad_x, grad_y) # حجم المتجه
+direction = cv2.phase(grad_x, grad_y, angleInDegrees=True) # اتجاه الحافة - زاوية الميل 
 
 plt.figure(figsize=(12,6))
 plt.subplot(2,2,1), plt.imshow(img, cmap='gray'), plt.title("Original")
